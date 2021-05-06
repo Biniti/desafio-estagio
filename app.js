@@ -5,7 +5,7 @@ function httpGet(url){
     return request.responseText;
 };
 
-const json_obj = JSON.parse(httpGet("https://api.randomuser.me/?results=10"));//transformando em um objeto json
+const jsonOjbect = JSON.parse(httpGet("https://api.randomuser.me/?results=10"));//transformando em um objeto json
 
 const  tbody = document.createElement("tbody");
 
@@ -13,15 +13,15 @@ const  table = document.querySelector("table");
 
 var nightModeIsActivate = false;
 
-for(var i = 0; i < json_obj.results.length; i++){
+for(let person of jsonOjbect.results){
     
     let line = document.createElement("tr");
 
-    line.innerHTML += "<td>" + json_obj.results[i].name.title + " " + json_obj.results[i].name.first + "</td>";
-    line.innerHTML += "<td>" + json_obj.results[i].name.last + "</td>";
-    line.innerHTML += "<td>" + json_obj.results[i].dob.age + "</td>";
-    line.innerHTML += "<td>" + json_obj.results[i].location.city + "</td>";
-    line.innerHTML += "<td>" + "<img src = '" + json_obj.results[i].picture.thumbnail + "' alt = 'pictures'/>"+ "</td>";
+    line.innerHTML += "<td>" + person.name.title + " " + person.name.first + "</td>";
+    line.innerHTML += "<td>" + person.name.last + "</td>";
+    line.innerHTML += "<td>" + person.dob.age + "</td>";
+    line.innerHTML += "<td>" + person.location.city + "</td>";
+    line.innerHTML += "<td>" + "<img src = '" + person.picture.thumbnail + "' alt = 'pictures'/>"+ "</td>";
     line.innerHTML += "</tr>";
 
     tbody.appendChild(line);
