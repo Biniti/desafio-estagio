@@ -1,5 +1,5 @@
 Resultado do desafio proposto pela empresa Moovery - Delivery Inteligente 
 
-<img src="/projectImage/firstShot.png" alt="first screen shot"/>
-<img src="/projectImage/secondShot.png" alt="first screen shot"/>
-<img src="/projectImage/thirdShot.png" alt="first screen shot"/>
+<img src="/projectImage/FirstShot.png" alt="first screen shot"/>
+<img src="/projectImage/SecondShot.png" alt="second screen shot"/>
+<img src="/projectImage/ThirdShot.png" alt="third screen shot"/>
